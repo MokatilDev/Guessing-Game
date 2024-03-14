@@ -4,15 +4,16 @@ use std::io;
 use colored::*;
 
 fn main() {
-    println!("Guess the number!");
+    println!("{}","Guess the number!".on_blue());
+    // println!("Made by MokatilDev");
 
     let secret_number = rand::thread_rng().gen_range(1..101);
 
     loop {
-        println!("=============================");
+        println!("{}","=============================".blue());
 
-        println!("Secret number {}", secret_number);
-        println!("- Please input your guess.");
+        // println!("Secret number {}", secret_number);
+        println!("- Please input your guess 🔢.");
 
         let mut guess = String::new(); 
         io::stdin()
@@ -24,7 +25,7 @@ fn main() {
             Err(_) => continue,
         };
 
-        println!("- You guessed {}", guess);
+        // println!("- You guessed {}", guess);kk
 
         match guess.cmp(&secret_number) {
             Ordering::Equal => {
@@ -36,3 +37,4 @@ fn main() {
         };
     }
 }
+nm,
